@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+$primaryColor: #ffff;
+$secondaryColor: black;
+$thirdColor: #bbc6fa;
+$fourthColor-rgb: rgb(23, 124, 229);
+$fifthColor: #333;
+
+$fontSize1: 32px;
+$fontSize2: 26px;
+
+$shadowBackground: 0 10px 20px 0px rgba(0, 0, 0, 0.5);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+body{
+    background: $thirdColor;
+}
+.container{
+    .quote-box{
+        background: $primaryColor;
+        width: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: $shadowBackground;
+        h2{
+            font-size: $fontSize1;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after{
+            content: '';
+            width: 75px;
+            height: 3px;
+            border-radius: 3px;
+            background: $fourthColor-rgb;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        blockquote{
+            font-size: $fontSize2;
+            min-height: 110px;
+        }
+        blockquote::before, blockquote::after{
+            content: '"';
+        }
+        span{
+            display: block;
+            margin-top: 10px;
+            float: right;
+            position: relative;
+        }
+        span::before{
+            content: '';
+            width: 20px;
+            height: 2px;
+            background: $fourthColor-rgb;
+            position: absolute;
+            top: 50%;
+            left: -30px;
+        }
+        .sec-btn{
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            button{
+                background: $fourthColor-rgb;
+                color: $primaryColor;
+                border-radius: 25px;
+                border: 1px solid $fourthColor-rgb;
+                width: 150px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+                cursor: pointer;
+                img{
+                    width: 20px;
+                }
+            }
+            button:nth-child(2){
+                background-color: transparent;
+                color: $fifthColor;
+            }
+        }
+    }
+}

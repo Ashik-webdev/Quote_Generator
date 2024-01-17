@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background: #bbc6fa;
+}
+
+.container .quote-box {
+  background: #ffff;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container .quote-box h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.container .quote-box h2::after {
+  content: '';
+  width: 75px;
+  height: 3px;
+  border-radius: 3px;
+  background: #177ce5;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.container .quote-box blockquote {
+  font-size: 26px;
+  min-height: 110px;
+}
+
+.container .quote-box blockquote::before, .container .quote-box blockquote::after {
+  content: '"';
+}
+
+.container .quote-box span {
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+
+.container .quote-box span::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: #177ce5;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+.container .quote-box .sec-btn {
+  width: 100%;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .quote-box .sec-btn button {
+  background: #177ce5;
+  color: #ffff;
+  border-radius: 25px;
+  border: 1px solid #177ce5;
+  width: 150px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.container .quote-box .sec-btn button img {
+  width: 20px;
+}
+
+.container .quote-box .sec-btn button:nth-child(2) {
+  background-color: transparent;
+  color: #333;
+}
+/*# sourceMappingURL=style.css.map */
